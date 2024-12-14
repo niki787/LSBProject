@@ -1,0 +1,6 @@
+c10:21:30.515 [Test worker] INFO  com.lsb.ExtractTextTest - Starting testLSBVisualizationNullImage
+W10:21:30.523 [Test worker] INFO  com.lsb.ExtractTextTest - Test finished successfully
+d10:21:30.530 [Test worker] INFO  com.lsb.ExtractTextTest - Starting testLSBVisualizationValidImage
+W10:21:30.595 [Test worker] INFO  com.lsb.ExtractTextTest - Test finished successfully
+Y10:21:30.600 [Test worker] INFO  com.lsb.ExtractTextTest - Starting testEmbedAndExtract
+U10:21:30.662 [Test worker] INFO  com.lsb.ExtractTextTest - Test passed successfully

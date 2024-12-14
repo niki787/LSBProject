@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.lsb.ExtractTextTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-12-14T07:21:30" hostname="DESKTOP-P40DGIS" time="0.158">
+  <properties/>
+  <testcase name="testLSBVisualizationNullImage()" classname="com.lsb.ExtractTextTest" time="0.021"/>
+  <testcase name="testLSBVisualizationValidImage()" classname="com.lsb.ExtractTextTest" time="0.067"/>
+  <testcase name="testEmbedAndExtract()" classname="com.lsb.ExtractTextTest" time="0.066"/>
+  <system-out><![CDATA[10:21:30.515 [Test worker] INFO  com.lsb.ExtractTextTest - Starting testLSBVisualizationNullImage
+10:21:30.523 [Test worker] INFO  com.lsb.ExtractTextTest - Test finished successfully
+10:21:30.530 [Test worker] INFO  com.lsb.ExtractTextTest - Starting testLSBVisualizationValidImage
+10:21:30.595 [Test worker] INFO  com.lsb.ExtractTextTest - Test finished successfully
+10:21:30.600 [Test worker] INFO  com.lsb.ExtractTextTest - Starting testEmbedAndExtract
+10:21:30.662 [Test worker] INFO  com.lsb.ExtractTextTest - Test passed successfully
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
