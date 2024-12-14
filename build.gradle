@@ -1,0 +1,82 @@
+plugins {
+  id 'java'
+  id 'application'
+  id 'org.openjfx.javafxplugin' version '0.0.13'
+  id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group 'com.lsb'
+version '1.0-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  junitVersion = '5.10.2'
+}
+
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
+
+application {
+  mainModule = 'com.lsb';
+  mainClass = 'com.lsb.Main' // Replace with your actual main class
+}
+
+javafx {
+  version = '21'
+  modules = ['javafx.controls', 'javafx.fxml', 'javafx.web', 'javafx.swing', 'javafx.media']
+}
+
+dependencies {
+
+  implementation("org.openjfx:javafx-controls:21")
+  implementation("org.openjfx:javafx-fxml:21")
+  implementation("org.openjfx:javafx-web:21")
+  implementation("org.openjfx:javafx-swing:21")
+  implementation("org.openjfx:javafx-media:21")
+
+
+  implementation 'org.controlsfx:controlsfx:11.2.1'
+  implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
+    exclude group: 'org.openjfx'
+  }
+  implementation('net.synedra:validatorfx:0.5.0') {
+    exclude group: 'org.openjfx'
+  }
+  implementation 'org.kordamp.ikonli:ikonli-javafx:12.3.1'
+  implementation 'org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0'
+  implementation('eu.hansolo:tilesfx:21.0.3') {
+    exclude group: 'org.openjfx'
+  }
+
+  implementation 'com.github.almasb:fxgl:17.3' // Or latest version
+
+  implementation("org.apache.logging.log4j:log4j-core:2.20.0") // Или последнюю версию
+  implementation("org.apache.logging.log4j:log4j-jcl:2.20.0") // Если используете JCL
+  implementation("org.apache.logging.log4j:log4j-1.2-api:2.20.0") // provides log4j 1.2 compatibility
+
+  testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+  testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+  testImplementation("org.assertj:assertj-core:3.24.2")
+}
+
+test {
+  useJUnitPlatform()
+}
+
+jar {
+  manifest {
+    attributes "Main-Class": "com.lsb.Main" // Replace with your actual main class
+  }
+}
+
+shadowJar {
+  archiveFileName = 'MainJar.jar' // Or whatever name you prefer
+}
