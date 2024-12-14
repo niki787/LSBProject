@@ -15,7 +15,7 @@
 
 ### Предварительные требования
 
-* Java Development Kit (JDK) 17+
+* Java Development Kit (JDK) 21+
 * Gradle (рекомендуется последняя версия)
 
 ### Сборка и запуск
